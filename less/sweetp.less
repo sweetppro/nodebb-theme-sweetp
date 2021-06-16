@@ -203,39 +203,6 @@ body.page-compose {
     font-family: Source Sans Pro, Helvetica Neue, Helvetica, Arial, sans-serif;
 }
 
-@media (max-width: 991px) {
-    .chat-modal {
-        padding-top: 116px !important;
-    }
-
-    .chat-modal .modal-body {
-        height: 100% !important;
-    }
-
-    .chats-full {
-        margin-bottom: 80px;
-        margin-top: -50px;
-    }
-
-    .chat-modal [component="chat/composer"],
-    .chats-full [component="chat/composer"] {
-        margin-bottom: 50px;
-    }
-
-    html.composing .composer {
-        padding-top: 116px;
-        z-index: 10000 !important;
-    }
-
-    .composer .tags-container .bootstrap-tagsinput input {
-        width: 100% !important;
-    }
-
-    .account {
-        margin-bottom: 4em;
-    }
-}
-
 #sweetp-footer ul li {
     display: inline-block;
     list-style-type: none;
@@ -336,12 +303,6 @@ div.categories .information .icon {
 
 #nav-dropdown {
     margin-right: 50px;
-}
-
-@media (min-width: 768px) {
-    .navbar-right {
-        margin-right: 0 !important;
-    }
 }
 
 .tooltip {
@@ -716,6 +677,12 @@ textarea,
     top: 0 !important;
 }
 
+@media (min-width: 992px) {
+    .composer .title-container .title {
+        line-height: 22px;
+    }
+}
+
 @media (min-width: 991px) and (max-width: 1200px) {
     .chats-full {
         margin-top: -50px;
@@ -730,6 +697,45 @@ textarea,
 
     #content {
         padding-top: 13px;
+    }
+}
+
+@media (min-width: 768px) {
+    .navbar-right {
+        margin-right: 0 !important;
+    }
+}
+
+@media (max-width: 991px) {
+    .chat-modal {
+        padding-top: 116px !important;
+    }
+
+    .chat-modal .modal-body {
+        height: 100% !important;
+    }
+
+    .chats-full {
+        margin-bottom: 80px;
+        margin-top: -50px;
+    }
+
+    .chat-modal [component="chat/composer"],
+    .chats-full [component="chat/composer"] {
+        margin-bottom: 50px;
+    }
+
+    html.composing .composer {
+        padding-top: 116px;
+        z-index: 10000 !important;
+    }
+
+    .composer .tags-container .bootstrap-tagsinput input {
+        width: 100% !important;
+    }
+
+    .account {
+        margin-bottom: 4em;
     }
 }
 
