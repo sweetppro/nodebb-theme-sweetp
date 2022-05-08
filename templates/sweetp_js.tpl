@@ -15,7 +15,7 @@ window.addEventListener('DOMContentLoaded', function() {
     //observe changes
     const observer = new MutationObserver((event) => {
         //add height to footer with posts to give room for pagination-block
-        var posts = document.querySelectorAll("ul#topic.posts");
+        var posts = document.querySelectorAll("ul.posts.timeline");
         if (posts.length !== 0) {
             footer.classList.add("padded");
         } else {
