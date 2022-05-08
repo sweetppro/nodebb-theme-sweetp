@@ -1,0 +1,12 @@
+{
+	"id": "nodebb-theme-sweetp",
+	"scripts": [
+		"../nodebb-theme-persona/public/modules/autohidingnavbar.js",
+		"../nodebb-theme-persona/public/persona.js"
+	],
+	"modules": {
+		"pulling.js": "../pulling/build/pulling-drawer.js",
+		"persona/quickreply.js": "../nodebb-theme-persona/public/modules/quickreply.js"
+	},
+	"templates": "templates"
+}
