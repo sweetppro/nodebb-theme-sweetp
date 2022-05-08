@@ -9,6 +9,19 @@ window.addEventListener('DOMContentLoaded', function() {
     var today = new Date();
     var yyyy = today.getFullYear();
 
-    document.getElementById('sweetp-footer').innerHTML = '<p>Copyright &copy; ' + yyyy + ' <a href="https://sweetpproductions.com">SweetP Productions, Inc.</a> All rights reserved.</p>';
+    var footer = document.getElementById('sweetp-footer');
+    footer.innerHTML = '<p>Copyright &copy; ' + yyyy + ' <a href="https://sweetpproductions.com">SweetP Productions, Inc.</a> All rights reserved.</p>';
+
+    //observe changes
+    const observer = new MutationObserver((event) => {
+        //add height to footer with posts to give room for pagination-block
+        var posts = document.querySelectorAll("ul#topic.posts");
+        if (posts.length !== 0) {
+            footer.classList.add("padded");
+        } else {
+            footer.classList.remove("padded");
+        }
+    });
+    observer.observe(document.body, {attributes: true, childList: true, subtree: true});
 });
 </script>
