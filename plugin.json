@@ -1,0 +1,26 @@
+{
+    "id": "nodebb-theme-harmony-sweetp",
+    "url": "https://github.com/sweetppro/nodebb-theme-sweetp",
+    "hooks": [
+        { "hook": "static:app.load", "method": "init" },
+        { "hook": "filter:admin.header.build", "method": "addAdminNavigation" },
+        { "hook": "filter:config.get", "method": "getThemeConfig" },
+        { "hook": "filter:settings.get", "method": "getAdminSettings" },
+        { "hook": "filter:user.saveSettings", "method": "saveUserSettings" },
+        { "hook": "filter:user.profileMenu", "method": "addProfileItem" },
+        { "hook": "filter:middleware.render", "method": "removeFinalBreadcrumb" }
+    ],
+    "scripts": [
+        "../nodebb-theme-harmony/public/harmony.js",
+        "scripts/sweetp.js"
+    ],
+    "modules":
+    {
+        "../admin/plugins/harmony.js": "../nodebb-theme-harmony/public/admin.js",
+        "../client/account/theme.js": "../nodebb-theme-harmony/public/settings.js",
+        "sweetp/customHelpers.js": "public/modules/customHelpers.js",
+        "sweetp/customHelpers-common.js": "public/modules/customHelpers-common.js"
+    },
+    "templates": "templates",
+    "languages": "../nodebb-theme-harmony/languages"
+}

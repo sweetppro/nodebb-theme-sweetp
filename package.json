@@ -1,0 +1,25 @@
+{
+  "name": "nodebb-theme-harmony-sweetp",
+  "version": "3.0.0",
+  "author": {
+    "name": "SweetP Productions, Inc",
+    "url": "https://sweetpproductions.com"
+  },
+  "description": "SweetP Productions NobeBB support forums custom harmony theme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sweetppro/nodebb-theme-sweetp"
+  },
+  "keywords": [
+    "nodebb",
+    "theme",
+    "forum",
+    "responsive",
+    "sweetp"
+  ],
+  "nbbpm": {
+    "compatibility": "^3.0.0"
+  },
+  "main": "lib/theme.js",
+  "license": "MIT"
+}

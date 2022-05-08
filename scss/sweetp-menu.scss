@@ -1,0 +1,269 @@
+html#sweetp {
+    .sweetp-menu {
+        margin-bottom: 50px;
+        z-index: 9000;
+    }
+
+    label .title {
+        position: relative;
+        top: 20px;
+        left: 20px;
+        font-family: Source Sans Pro, Helvetica Neue, Helvetica, Arial, sans-serif;
+        letter-spacing: 0;
+    }
+
+    label .title .light {
+        font-weight: 200;
+    }
+
+    label .title a {
+        margin-bottom: 0 !important;
+    }
+
+    label .title a::before {
+        content: '';
+        background: url('https://sweetpproductions.com/gfx/sweetp_logo.svg') no-repeat;
+        background-size: 100% 100%;
+        width: 24px;
+        height: 30px;
+        display: block;
+        float: left;
+        margin: 0 5px 0 0;
+        z-index: 9000;
+        filter: brightness(0) saturate(100%) invert(23%) sepia(0%) saturate(240%) hue-rotate(245deg) brightness(101%) contrast(83%);
+    }
+
+    label .sweetp-hamburger-menu {
+        position: fixed;
+        right: -100px;
+        top: -100px;
+        z-index: 10000;
+        width: 200px;
+        height: 200px;
+        background: #e4e4e4;
+        border-radius: 50% 50% 50% 50%;
+        transition: .5s ease-in-out;
+        box-shadow: 0 0 0 0 #e4e4e4, 0 0 0 0 #e4e4e4 !important;
+        cursor: pointer;
+        pointer-events: all;
+    }
+
+    label .hamburger {
+        position: absolute;
+        top: 135px;
+        left: 50px;
+        width: 30px;
+        height: 2px;
+        background: #000;
+        display: block;
+        -webkit-transform-origin: center;
+        transform-origin: center;
+        transition: .5s ease-in-out;
+    }
+
+    label .hamburger:after,
+    label .hamburger:before {
+        transition: .5s ease-in-out;
+        content: "";
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 100%;
+        background: #000;
+    }
+
+    label .hamburger:before {
+        top: -10px;
+    }
+
+    label .hamburger:after {
+        bottom: -10px;
+    }
+
+    label.sweetp-menu input {
+        display: none;
+    }
+
+    label input:checked+.sweetp-hamburger-menu {
+        box-shadow: 0 0 0 100vw #e4e4e4, 0 0 0 100vh #e4e4e4 !important;
+        border-radius: 0;
+    }
+
+    label input:checked+.sweetp-hamburger-menu .hamburger {
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+    }
+
+    label input:checked+.sweetp-hamburger-menu .hamburger:after {
+        -webkit-transform: rotate(90deg);
+        transform: rotate(90deg);
+        bottom: 0;
+    }
+
+    label input:checked+.sweetp-hamburger-menu .hamburger:before {
+        -webkit-transform: rotate(90deg);
+        transform: rotate(90deg);
+        top: 0;
+    }
+
+    label input:checked+.sweetp-hamburger-menu+ul {
+        opacity: 1;
+        pointer-events: all;
+    }
+
+    label ul {
+        z-index: 20000;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        opacity: 0;
+        transition: .25s 0s ease-in-out;
+        text-align: center;
+        white-space: nowrap;
+        list-style-type: none;
+        font-family: Source Sans Pro, Helvetica Neue, Helvetica, Arial, sans-serif;
+        padding: 0;
+        margin: 0;
+        pointer-events: none;
+    }
+
+    label ul li {
+        display: block !important;
+    }
+
+    label a,
+    label a:hover,
+    label a:visited {
+        display: block;
+        color: #474747 !important;
+        text-decoration: none;
+        font-size: 30px;
+        font-weight: bold;
+        line-height: 30px;
+        margin-bottom: 30px;
+    }
+
+    label ul a,
+    label ul a:visited {
+        color: #656565 !important;
+    }
+
+    label ul a:hover {
+        color: #474747 !important;
+    }
+
+    #bitcoin_social {
+        height: 30px;
+        margin: 20px 0 0 0;
+        display: inline-block;
+    }
+
+    #bitcoin_social a {
+        display: inline-block;
+    }
+
+    #bitcoin_social img {
+        height: 30px;
+        width: 30px;
+        padding: 0 !important;
+        display: inline-block;
+    }
+
+    .disabled-pointer {
+        pointer-events: none;
+    }
+
+    .twitter {
+        filter: brightness(0) saturate(100%) invert(38%) sepia(0%) saturate(1649%) hue-rotate(140deg) brightness(99%) contrast(81%);
+    }
+
+    @media screen and (max-width: 414px) {
+        label .title {
+            top: 10px;
+            left: 10px;
+        }
+
+        label .title a {
+            font-size: 24px !important;
+        }
+
+        label .title a::before {
+            width: 19px;
+            height: 24px;
+            display: block;
+            float: left;
+            margin: 3px 4px 0 0;
+        }
+    }
+
+    @media screen and (max-width: 375px) {
+        label .title a {
+            font-size: 20px !important;
+        }
+
+        label .title a::before {
+            width: 16px;
+            height: 20px;
+            display: block;
+            float: left;
+            margin: 5px 3px 0 0;
+        }
+    }
+
+    @media screen and (max-width: 320px) {
+        label .title a {
+            font-size: 15px !important;
+        }
+
+        label .title a::before {
+            width: 12px;
+            height: 15px;
+            display: block;
+            float: left;
+            margin: 7px 2px 0 0;
+        }
+    }
+
+    /* dark theme */
+    @media (prefers-color-scheme: dark) {
+        label .title a::before {
+            filter: brightness(0) saturate(100%) invert(99%) sepia(10%) saturate(33%) hue-rotate(71deg) brightness(103%) contrast(79%);
+        }
+
+        label a,
+        label a:hover,
+        label a:visited {
+            color: #e4e4e4 !important;
+        }
+
+        label .sweetp-hamburger-menu {
+            background: #171717;
+            box-shadow: 0 0 0 0 #171717, 0 0 0 0 #171717 !important;
+        }
+
+        label input:checked+.sweetp-hamburger-menu {
+            box-shadow: 0 0 0 100vw #171717, 0 0 0 100vh #171717 !important;
+        }
+
+        label .hamburger,
+        label .hamburger:after,
+        label .hamburger:before {
+            background: #e4e4e4 !important;
+        }
+
+        label ul a,
+        label ul a:visited {
+            color: #b4b4b4 !important;
+        }
+
+        label ul a:hover {
+            color: #e4e4e4 !important;
+        }
+
+        .twitter {
+            filter: brightness(0) saturate(100%) invert(76%) sepia(3%) saturate(44%) hue-rotate(332deg) brightness(94%) contrast(93%);
+        }
+    }
+}
