@@ -22,6 +22,6 @@ window.addEventListener('DOMContentLoaded', function() {
             footer.classList.remove("padded");
         }
     });
-    observer.observe(document.body, {attributes: true, childList: true, subtree: true});
+    observer.observe(document.body, {childList: true});
 });
 </script>
