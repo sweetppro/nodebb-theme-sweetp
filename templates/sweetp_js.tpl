@@ -12,8 +12,7 @@ window.addEventListener('DOMContentLoaded', function() {
     var footer = document.getElementById('sweetp-footer');
     footer.innerHTML = '<p>Copyright &copy; ' + yyyy + ' <a href="https://sweetpproductions.com">SweetP Productions, Inc.</a> All rights reserved.</p>';
 
-    //observe changes
-    const observer = new MutationObserver((event) => {
+    function checkFooterHeight() {
         //add height to footer with posts to give room for pagination-block
         var posts = document.querySelectorAll("ul.posts.timeline");
         if (posts.length !== 0) {
@@ -21,7 +20,12 @@ window.addEventListener('DOMContentLoaded', function() {
         } else {
             footer.classList.remove("padded");
         }
+    }
+
+    //observe changes
+    $(window).on('action:ajaxify.end', function(ev, data) {
+        checkFooterHeight();
     });
-    observer.observe(document.body, {childList: true});
+    
 });
 </script>
