@@ -72,6 +72,10 @@ body.page-register-complete .row {
     padding: 8px !important;
 }
 
+.composer .title-container .form-control {
+    height: initial !important;
+}
+
 .composer .preview-container {
     margin: 0 !important;
 }
@@ -291,6 +295,15 @@ body.page-register-complete .row {
 
 .topic .pagination-block .wrapper {
     color: #444;
+}
+
+.topic .posts.timeline [component="topic/event"].timeline-event .timeline-text,
+.topic .posts.timeline [component="topic/necro-post"].timeline-event .timeline-text {
+    color: #bbb !important;
+}
+
+.topic .posts.timeline [component="topic/event"].timeline-event a {
+    margin-left: 0.1em;
 }
 
 .topic .pagination-block {
@@ -756,7 +769,7 @@ textarea,
 
 .topic .posts {
     padding: 20px 6px 0 6px !important;
-    margin-bottom: 36px;
+    margin-bottom: 50px;
 }
 
 .navbar-fixed-top {
@@ -1150,6 +1163,18 @@ textarea,
     #search-form #search-fields .form-group a,
     #search-form #search-fields .form-group a:hover {
         color: #e4e4e4 !important;
+    }
+
+    .topic .posts.timeline .timeline-event .avatar,
+    .topic .posts.timeline .timeline-event .timeline-badge,
+    .topic .posts.timeline>[component=post] .avatar,
+    .topic .posts.timeline>[component=post] .timeline-badge {
+        box-shadow: 0 0 0 .5rem #232323 !important;
+    }
+
+    .topic .posts.timeline [component="topic/event"].timeline-event .timeline-badge,
+    .topic .posts.timeline [component="topic/necro-post"].timeline-event .timeline-badge {
+        background-color: #232323 !important;
     }
 
     .fa-stack {
