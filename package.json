@@ -17,5 +17,9 @@
         "responsive",
         "sweetp"
     ],
+    "nbbpm": {
+    "compatibility": "^2.0.0"
+    },
+    "main": "library.js",
     "license": "MIT"
 }

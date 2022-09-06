@@ -1,5 +1,6 @@
 {
 	"id": "nodebb-theme-sweetp",
+	"url": "https://github.com/sweetppro/nodebb-theme-sweetp",
 	"scripts": [
 		"../nodebb-theme-persona/public/modules/autohidingnavbar.js",
 		"../nodebb-theme-persona/public/persona.js"
