@@ -1,6 +1,12 @@
 {
 	"id": "nodebb-theme-sweetp",
 	"url": "https://github.com/sweetppro/nodebb-theme-sweetp",
+	"library": "./library.js",
+	"hooks": [
+		{
+			"hook": "filter:meta.getMetaTags", "method": "removeThemeColorMetaTag"
+		}
+	],
 	"scripts": [
 		"../nodebb-theme-persona/public/modules/autohidingnavbar.js",
 		"../nodebb-theme-persona/public/persona.js"

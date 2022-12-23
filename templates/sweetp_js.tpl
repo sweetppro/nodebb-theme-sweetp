@@ -1,10 +1,6 @@
 <script>
 window.addEventListener('DOMContentLoaded', function() {
 
-    /* fix iphone toolbar color */
-    var themes = document.querySelectorAll("[name='theme-color']");
-    themes[0].remove()
-
     /* fix footer */
     var today = new Date();
     var yyyy = today.getFullYear();
@@ -22,9 +18,55 @@ window.addEventListener('DOMContentLoaded', function() {
         }
     }
 
+    function refreshThemeColorMetaTags() {
+        const light = document.querySelector('meta[name="theme-color"][media="(prefers-color-scheme: light)"]');
+        const dark = document.querySelector('meta[name="theme-color"][media="(prefers-color-scheme: dark)"]');
+
+        const head = light.parentNode;
+        head.removeChild(light);
+        head.removeChild(dark);
+
+        const child = document.querySelector('meta[name="color-scheme"]').nextSibling;
+        head.insertBefore(light, child);
+        head.insertBefore(dark, child);
+    }
+    refreshThemeColorMetaTags();
+
+    function updateMobileNav() {
+        //apply active class to mobile menu
+        //get active tab from main menu
+        var active = document.querySelectorAll("#main-nav > .active")[0];
+        if (active !== undefined) {
+            //get title from child
+            var child = active.querySelectorAll("a")[0];
+            var title = child.dataset.originalTitle;
+            if (title === undefined) {
+                title = child.title;
+            }
+
+            //get mobile element
+            var mobileMenu = document.querySelector(".menu-section-list");
+            var mobileElems = mobileMenu.querySelectorAll('.navigation-link');
+            mobileElems.forEach((elem) => {
+                var mobileTitle = elem.title;
+
+                //add selected class
+                if (mobileTitle == title) {
+                    elem.classList.add("selected");
+                } else {
+                    elem.classList.remove("selected");
+                }
+            });
+        }
+    }
+
     //observe changes
     $(window).on('action:ajaxify.end', function(ev, data) {
         checkFooterHeight();
+    });
+
+    $(window).on('action:ajaxify.updateTitle', function() {
+        updateMobileNav();
     });
     
 });

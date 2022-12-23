@@ -94,11 +94,11 @@ body.page-register-complete .row {
 }
 
 .account .cover {
-    top: 116px;
+    top: 120px;
 }
 
 #nprogress .bar {
-    background: #eee !important;
+    background: #f5f5f5 !important;
 }
 
 #nprogress .peg {
@@ -116,14 +116,14 @@ body.page-register-complete .row {
 }
 
 #panel .navbar {
-    min-height: 104px !important;
-    max-height: 104px;
+    min-height: 120px !important;
+    max-height: 120px;
     box-shadow: none !important;
-    background-color: #f4f4f4 !important;
+    background-color: #f5f5f5 !important;
 }
 
 #panel .navbar .container {
-    margin-top: 56px;
+    margin-top: 70px;
 }
 
 #panel .navbar #user_label {
@@ -364,8 +364,19 @@ div.categories .information .icon {
 }
 
 #search-form #search-fields .form-group a,
-#search-form #search-fields .form-group a:hover {
-    color: #666 !important;
+#search-form #search-fields .form-group a:hover,
+.navbar-default .btn-link,
+.navbar-default .navbar-nav>li>a,
+.navbar-default .navbar-nav>li>a:hover,
+.navbar-default .navbar-nav>.active>a,
+.navbar-default .navbar-nav>.active>a:focus,
+.navbar-default .navbar-nav>.active>a:hover,
+.dropdown-menu>li>a {
+    color: #474747 !important;
+}
+
+.textcomplete-dropdown {
+    background-color: initial !important;
 }
 
 #search-form #search-fields {
@@ -731,11 +742,14 @@ textarea,
     border-radius: 3px !important;
 }
 
+.navbar-default .btn-link:hover,
 .navbar-default .navbar-nav>li>a:focus,
 .navbar-default .navbar-nav>li>a:hover,
-.notification-list li:hover,
+.navbar-default .navbar-nav>.active>a,
+.navbar-default .navbar-nav>.active>a:focus,
+.navbar-default .navbar-nav>.active>a:hover .notification-list li:hover,
 .slideout-menu .notification-list li:hover {
-    background-color: #eee;
+    background-color: #e4e4e4 !important;
 }
 
 .navbar-default .navbar-nav>.open>a,
@@ -802,7 +816,7 @@ textarea,
 
 .notification-list li:hover,
 .slideout-menu .notification-list li:hover {
-    background: #eee !important;
+    background: #e4e4e4 !important;
 }
 
 .chats-list>li .main-avatar .avatar {
@@ -838,7 +852,7 @@ textarea,
 
 @media (max-width: 991px) {
     .chat-modal {
-        padding-top: 116px !important;
+        padding-top: 120px !important;
     }
 
     .chat-modal .modal-body {
@@ -855,7 +869,7 @@ textarea,
     }
 
     html.composing .composer {
-        padding-top: 116px;
+        padding-top: 120px;
         z-index: 10000 !important;
     }
 
@@ -924,7 +938,7 @@ textarea,
     }
 
     .slideout-menu {
-        top: 116px !important;
+        top: 120px !important;
         background-color: #e4e4e4 !important;
         background-image: none !important;
     }
@@ -947,7 +961,16 @@ textarea,
         color: #474747 !important;
     }
 
-    .menu-section-list a:hover,
+    .slideout-menu li a.selected,
+    .menu-section-list a:hover {
+        color: #e4e4e4 !important;
+    }
+
+    .menu-section-list a.selected,
+    .menu-section-list a:hover {
+        background-color: #327635 !important;
+    }
+
     .menu-section-list button:hover,
     #chats-menu .nav-pills {
         background-color: #d3d3d3 !important;
@@ -1028,14 +1051,12 @@ textarea,
         color: #e4e4e4 !important;
     }
 
-    .menu-section-list a:hover,
-    .menu-section-list button:hover,
-    #chats-menu .nav-pills {
-        background-color: #323232 !important;
-    }
-
     #chats-menu .nav-pills li.active a {
         background-color: #171717 !important;
+    }
+
+    #chats-menu .nav-pills {
+        background-color: #323232 !important;
     }
 
     .slideout-menu .nav>li>a:focus,
@@ -1114,16 +1135,23 @@ textarea,
         background-color: #232323 !important;
     }
 
+    .navbar-default .navbar-nav>.active>a,
+    .navbar-default .navbar-nav>.active>a:focus,
+    .navbar-default .navbar-nav>.active>a:hover,
+    #search-form #search-fields .form-group a,
+    #search-form #search-fields .form-group a:hover,
+    .btn-link:active:hover,
+    .btn-link:hover,
+    .navbar-default .navbar-nav>.active>a:hover .btn-link:hover .navbar-default .btn-link,
+    .navbar-default .btn-link,
     .navbar-default .navbar-nav>li>a,
     .navbar-default .navbar-nav>li>a:hover,
     .navbar-default .navbar-nav>.active>a,
     .navbar-default .navbar-nav>.active>a:focus,
     .navbar-default .navbar-nav>.active>a:hover,
-    .input-group-addon,
-    .navbar-default .btn-link,
     .dropdown-menu>li>a,
     .form-control {
-        color: #e4e4e4;
+        color: #e4e4e4 !important;
     }
 
     .h1,
@@ -1217,6 +1245,10 @@ textarea,
         background: #232323;
     }
 
+    #panel navbar {
+        background-color: #1e1e1e !important;
+    }
+
     .pagination>li>a,
     .pagination>li>span,
     .bootstrap-tagsinput,
@@ -1254,6 +1286,11 @@ textarea,
         border-color: #171717;
     }
 
+    .navbar-default .navbar-nav>li>a:focus,
+    .navbar-default .navbar-nav>li>a:hover,
+    .navbar-default .navbar-nav>.active>a,
+    .navbar-default .navbar-nav>.active>a:hover .notification-list li:hover,
+    .slideout-menu .notification-list li:hover,
     .navbar-default .navbar-nav>.active>a,
     .navbar-default .navbar-nav>.active>a:focus,
     .navbar-default .navbar-nav>.active>a:hover,
@@ -1307,7 +1344,7 @@ textarea,
     }
 
     #nprogress .bar {
-        background: #171717 !important;
+        background: #232323 !important;
     }
 
     #nprogress .peg {
