@@ -1,0 +1,70 @@
+<script>
+window.addEventListener('DOMContentLoaded', function() {
+
+    /* fix footer */
+    var today = new Date();
+    var yyyy = today.getFullYear();
+
+    var footer = document.getElementById('sweetp-footer');
+    footer.innerHTML = '<p>Copyright &copy; ' + yyyy + ' <a href="https://sweetpproductions.com">SweetP Productions, Inc.</a> All rights reserved.</p>';
+
+    function checkFooterHeight() {
+        //add height to footer with posts to give room for pagination-block
+        var posts = document.querySelectorAll("ul.posts.timeline");
+        if (posts.length !== 0) {
+            footer.classList.add("padded");
+        } else {
+            footer.classList.remove("padded");
+        }
+    }
+
+    function refreshThemeColorMetaTags() {
+        const light = document.querySelector('meta[name="theme-color"][media="(prefers-color-scheme: light)"]');
+        const dark = document.querySelector('meta[name="theme-color"][media="(prefers-color-scheme: dark)"]');
+
+        const head = light.parentNode;
+        head.removeChild(light);
+        head.removeChild(dark);
+
+        const child = document.querySelector('meta[name="color-scheme"]').nextSibling;
+        head.insertBefore(light, child);
+        head.insertBefore(dark, child);
+    }
+    refreshThemeColorMetaTags();
+
+    function updateMobileNav() {
+        //apply active class to mobile menu
+        //get active tab from main menu
+        var active = document.querySelectorAll(".nav-link.navigation-link.active")[0];
+        if (active !== undefined) {
+            //get title from parent
+            var parent = active.parentElement;
+            var title = parent.title;
+
+            //get mobile element
+            var mobileMenu = document.querySelector(".menu-section-list");
+            var mobileElems = mobileMenu.querySelectorAll('.nav-link.navigation-link');
+            mobileElems.forEach((elem) => {
+                var parentElem = elem.parentElement;
+                var mobileTitle = parentElem.title;
+
+                //add selected class
+                if (mobileTitle == title) {
+                    elem.classList.add("selected");
+                } else {
+                    elem.classList.remove("selected");
+                }
+            });
+        }
+    }
+
+    //observe changes
+    $(window).on('action:ajaxify.end', function(ev, data) {
+        checkFooterHeight();
+    });
+
+    $(window).on('action:ajaxify.updateTitle', function() {
+        updateMobileNav();
+    });
+});
+</script>

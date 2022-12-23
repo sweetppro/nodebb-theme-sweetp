@@ -1,0 +1,25 @@
+{
+    "name": "nodebb-theme-sweetp",
+    "version": "3.0.0",
+    "author": {
+        "name": "Russell Gray",
+        "url": "https://sweetpproductions.com"
+    },
+    "description": "SweetP Productions Support forum NodeBB theme",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/sweetppro/nodebb-theme-sweetp"
+    },
+    "keywords": [
+        "nodebb",
+        "theme",
+        "forum",
+        "responsive",
+        "sweetp"
+    ],
+    "nbbpm": {
+    "compatibility": "^3.0.0"
+    },
+    "main": "library.js",
+    "license": "MIT"
+}

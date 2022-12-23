@@ -1,0 +1,23 @@
+// bootstrap overrides
+
+$navbar-nav-link-padding-x: 0.875rem!default;
+$font-size-base: 0.875rem!default;
+
+// font
+$font-family-sans-serif:  Source Sans Pro, Helvetica Neue, Helvetica, Arial, sans-serif !default;
+
+// tooltips
+$tooltip-color: #fcfcfc;
+$tooltip-bg: rgb(121, 121, 121);
+$tooltip-opacity: 1.0;
+$tooltip-border-radius: 4px;
+$tooltip-padding-y: 4px;
+$tooltip-padding-x: 8px;
+
+// https://getbootstrap.com/docs/5.0/customize/options/
+$enable-rounded: false;
+$enable-shadows: true;
+$enable-gradients: false;
+$enable-caret: false;
+$enable-smooth-scroll: false;
+$enable-dark-mode: false;

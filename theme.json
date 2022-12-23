@@ -1,0 +1,8 @@
+{
+  "id": "nodebb-theme-sweetp",
+  "name": "SweetP Persona",
+  "description": "SweetP Productions custom Persona theme",
+  "url": "https://support.sweetpproductions.com",
+  "screenshot": "screenshot.png",
+  "baseTheme": "nodebb-theme-persona"
+}
