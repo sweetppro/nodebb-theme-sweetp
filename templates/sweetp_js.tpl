@@ -29,7 +29,10 @@ window.addEventListener('DOMContentLoaded', function() {
         if (active !== undefined) {
             //get title from child
             var child = active.querySelectorAll("a")[0];
-            var title = child.title;
+            var title = child.dataset.originalTitle;
+            if (title === undefined) {
+                title = child.title;
+            }
 
             //get mobile element
             var mobileMenu = document.querySelector(".menu-section-list");
