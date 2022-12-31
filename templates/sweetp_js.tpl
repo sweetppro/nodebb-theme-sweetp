@@ -18,17 +18,6 @@ window.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    function updateThemeColor() {
-        const light = document.querySelector('meta[name="theme-color"][media="(prefers-color-scheme: light)"]')?.getAttribute('content');
-        const dark = document.querySelector('meta[name="theme-color"][media="(prefers-color-scheme: dark)"]')?.getAttribute('content');
-
-        document.querySelector('meta[name="theme-color"][media="(prefers-color-scheme: light)"]')?.removeAttribute();
-        document.querySelector('meta[name="theme-color"][media="(prefers-color-scheme: dark)"]')?.removeAttribute();
-
-        document.querySelector('meta[name="theme-color"][media="(prefers-color-scheme: light)"]')?.setAttribute('content', light);
-        document.querySelector('meta[name="theme-color"][media="(prefers-color-scheme: dark)"]')?.setAttribute('content', dark);
-    }
-
     function updateMobileNav() {
         //apply active class to mobile menu
         //get active tab from main menu
@@ -60,7 +49,6 @@ window.addEventListener('DOMContentLoaded', function() {
     //observe changes
     $(window).on('action:ajaxify.end', function(ev, data) {
         checkFooterHeight();
-        updateThemeColor();
     });
 
     $(window).on('action:ajaxify.updateTitle', function() {
