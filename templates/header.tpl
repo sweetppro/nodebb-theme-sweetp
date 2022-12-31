@@ -3,7 +3,7 @@
 	<title>{browserTitle}</title>
 	<meta name="color-scheme" content="dark light">
 	<meta name="theme-color" content="#f5f5f5" media="(prefers-color-scheme: light)">
-	<meta name="theme-color" content="#232323" media="(prefers-color-scheme: dark)">
+	<meta name="theme-color" content="#1e1e1e" media="(prefers-color-scheme: dark)">
 	{{{each metaTags}}}{function.buildMetaTag}{{{end}}}
 	<link rel="stylesheet" type="text/css" href="{relative_path}/assets/client{{{if bootswatchSkin}}}-{bootswatchSkin}{{{end}}}.css?{config.cache-buster}" />
 	{{{each linkTags}}}{function.buildLinkTag}{{{end}}}
