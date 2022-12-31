@@ -1,10 +1,6 @@
 <script>
 window.addEventListener('DOMContentLoaded', function() {
 
-    /* fix iphone toolbar color */
-    var themes = document.querySelectorAll("[name='theme-color']");
-    themes[themes.length - 1].remove()
-
     /* fix footer */
     var today = new Date();
     var yyyy = today.getFullYear();
