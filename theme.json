@@ -1,7 +1,8 @@
 {
-  "id": "nodebb-theme-sweetp",
-  "name": "SweetP Support theme",
-  "description": "SweetP Productions Support forum NodeBB theme",
+  "id": "nodebb-theme-harmony-sweetp",
+  "name": "SweetP Harmony",
+  "description": "SweetP Productions custom Harmony theme",
   "url": "https://support.sweetpproductions.com",
-  "screenshot": "screenshot.png"
+  "screenshot": "screenshot.png",
+  "baseTheme": "nodebb-theme-harmony"
 }

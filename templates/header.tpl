@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-	<html lang="{function.localeToHTML, userLang, defaultLang}" {{{if languageDirection}}}data-dir="{languageDirection}" style="direction: {languageDirection};"{{{end}}}><head>
+<html id="sweetp" lang="{function.localeToHTML, userLang, defaultLang}" {{{if languageDirection}}}data-dir="{languageDirection}" style="direction: {languageDirection};"{{{end}}}>
+<head>
 	<title>{browserTitle}</title>
 	<meta name="color-scheme" content="dark light">
-	<meta name="theme-color" content="#f5f5f5" media="(prefers-color-scheme: light)">
+	<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
 	<meta name="theme-color" content="#1e1e1e" media="(prefers-color-scheme: dark)">
-	{{{each metaTags}}}{function.buildMetaTag}{{{end}}}
-	<link rel="stylesheet" type="text/css" href="{relative_path}/assets/client{{{if bootswatchSkin}}}-{bootswatchSkin}{{{end}}}.css?{config.cache-buster}" />
+	{{{each metaTags}}}{function.buildSweetPMetaTag}{{{end}}}
+	<link rel="stylesheet" type="text/css" href="{relative_path}/assets/client{{{if bootswatchSkin}}}-{bootswatchSkin}{{{end}}}{{{ if (languageDirection=="rtl") }}}-rtl{{{ end }}}.css?{config.cache-buster}" />
 	{{{each linkTags}}}{function.buildLinkTag}{{{end}}}
 
 	<script>
@@ -13,9 +14,9 @@
 		var app = {
 			user: JSON.parse('{{userJSON}}')
 		};
-	</script>
 
-    <!-- IMPORT sweetp_js.tpl -->
+		document.documentElement.style.setProperty('--panel-offset', `${localStorage.getItem('panelOffset') || 0}px`);
+	</script>
 
 	{{{if useCustomHTML}}}
 	{{customHTML}}
@@ -25,21 +26,24 @@
 	{{{end}}}
 </head>
 
-<body class="{bodyClass} skin-{{{if bootswatchSkin}}}{bootswatchSkin}{{{else}}}noskin{{{end}}}">
-    <div id="sweetp-wrapper">
-        <nav id="menu" class="slideout-menu hidden">
-            <!-- IMPORT partials/slideout-menu.tpl -->
-        </nav>
-        <nav id="chats-menu" class="slideout-menu hidden">
-            <!-- IMPORT partials/chats-menu.tpl -->
-        </nav>
+<body class="{bodyClass} skin-noskin">
+	<div id="sweetp-wrapper">
+		<div class="d-flex justify-content-between pb-4 pb-md-0">
+			<!-- IMPORT partials/sidebar-left.tpl -->
 
-        <main id="panel" class="slideout-panel">
-            <nav class="navbar navbar-default navbar-fixed-top header" id="header-menu" component="navbar">
-                <div class="container">
-                    <!-- IMPORT partials/menu.tpl -->
-                </div>
-            </nav>
-            <div class="container" id="content">
-            <!-- IMPORT partials/noscript/warning.tpl -->
-			<!-- IMPORT partials/noscript/message.tpl -->
+			<main id="panel" class="d-flex flex-column gap-3 flex-grow-1 mt-3" style="min-width: 0;">
+				<!-- IMPORT partials/header/brand.tpl -->
+				<!-- IMPORT sweetp_header.tpl -->
+				<script>
+					const headerEl = document.getElementById('header-menu');
+					if (headerEl) {
+						const rect = headerEl.getBoundingClientRect();
+						const offset = Math.max(0, rect.bottom);
+						document.documentElement.style.setProperty('--panel-offset', offset + `px`);
+					} else {
+						document.documentElement.style.setProperty('--panel-offset', `0px`);
+					}
+				</script>
+				<div class="container d-flex flex-column gap-3" id="content">
+				<!-- IMPORT partials/noscript/warning.tpl -->
+				<!-- IMPORT partials/noscript/message.tpl -->
