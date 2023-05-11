@@ -21,6 +21,5 @@
         "sweetp/customHelpers.js": "public/modules/customHelpers.js",
         "sweetp/customHelpers-common.js": "public/modules/customHelpers-common.js"
     },
-    "templates": "templates",
-    "languages": "../nodebb-theme-harmony/languages"
+    "templates": "templates"
 }
