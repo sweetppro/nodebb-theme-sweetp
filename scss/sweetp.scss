@@ -212,6 +212,10 @@ html#sweetp {
         padding-left: 0.5em;
     }
 
+    ul.categories-list li.selected, ul.topics-list li.selected {
+        background-color: var(--outline-color) !important;
+    }
+
 
 
     /* Chat */
