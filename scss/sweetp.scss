@@ -212,8 +212,14 @@ html#sweetp {
         padding-left: 0.5em;
     }
 
+    ul.categories-list li, ul.topics-list li {
+        padding: 0 5px;
+        margin-bottom: 5px;
+    }
+
     ul.categories-list li.selected, ul.topics-list li.selected {
-        background-color: var(--outline-color) !important;
+        background-color: var(--outline-color);
+        border-radius: var(--bs-border-radius-sm);
     }
 
 
