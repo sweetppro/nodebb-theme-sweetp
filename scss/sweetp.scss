@@ -562,9 +562,13 @@ html#sweetp {
     .hljs {
         display: block;
         overflow-x: auto;
-        padding: 0.5em;
+        padding: 1em;
         color: #383a42;
         background: #fafafa;
+        border-radius: 2px;
+        padding: 1em;
+        white-space: pre-wrap;
+        overflow-x: auto;
     }
 
     .hljs-comment,
