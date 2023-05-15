@@ -532,6 +532,10 @@ html#sweetp {
         color: var(--black-color) !important;
     }
 
+    .btn[component="copy/code/btn"] {
+        margin-right: 0 !important;
+    }
+
     .bottom-sheet .btn {
         --bs-btn-hover-color: var(--text-color);
         --bs-btn-active-color: var(--text-color);
