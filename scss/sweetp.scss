@@ -363,7 +363,8 @@ html#sweetp {
         background-color: var(--secondary-background-color) !important;
     }
 
-    .topic-list-header .text-bg-light {
+    .topic-list-header .text-bg-light,
+    .sticky-tools nav .text-bg-light {
         color: inherit !important;
     }
 
