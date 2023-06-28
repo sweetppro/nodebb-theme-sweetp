@@ -106,10 +106,11 @@ html#sweetp {
     }
 
     blockquote {
-        background-color: var(--secondary-background-color);
+        background-color: var(--secondary-background-color) !important;
         border-left: 2px solid var(--outline-color);
         border-radius: 0 4px 4px 0;
         word-break: break-word;
+        color: inherit !important;
     }
 
 
@@ -357,12 +358,13 @@ html#sweetp {
 
     .topic-list-header,
     .topic-list-header .text-bg-light,
-    .sticky-tools .card-header {
+    .sticky-tools .card-header,
+    .sticky-tools nav .text-bg-light {
         background-color: var(--secondary-background-color) !important;
     }
 
     .topic-list-header .text-bg-light {
-        color: initial !important;
+        color: inherit !important;
     }
 
     .bottombar .nav-text {
