@@ -356,8 +356,13 @@ html#sweetp {
     }
 
     .topic-list-header,
+    .topic-list-header .text-bg-light,
     .sticky-tools .card-header {
-        background-color: var(--secondary-background-color);
+        background-color: var(--secondary-background-color) !important;
+    }
+
+    .topic-list-header .text-bg-light {
+        color: initial !important;
     }
 
     .bottombar .nav-text {
