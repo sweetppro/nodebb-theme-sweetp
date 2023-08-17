@@ -275,6 +275,10 @@ html#sweetp {
         color: var(--black-color) !important;
     }
 
+    [component="chat/recent"] .active .chat-room-btn {
+        background-color: transparent !important;
+    }
+
 
     /* Notifications */
     @media (max-width: 575.97px) {
