@@ -275,9 +275,12 @@ html#sweetp {
         color: var(--black-color) !important;
     }
 
-    .chat-room-btn,
-    .chat-room-btn:hover,
-    .mark-read:hover {
+    [component="chat/recent"] .chat-room-btn,
+    [component="chat/recent"] .chat-room-btn:hover,
+    [component="chat/recent"] .mark-read:hover,
+    [component="chat/recent/room"] .chat-room-btn,
+    [component="chat/recent/room"] .chat-room-btn:hover,
+    [component="chat/recent/room"] .mark-read:hover {
         background-color: transparent !important;
     }
 
