@@ -13,19 +13,13 @@ $gray-800: #343a40 !default;
 $gray-900: #212529 !default;
 $black:    #000 !default;
 
-
 $text-color: #474747;
 $highlight-color: #429c46;
 
 $blue:    #0d6efd !default;
-// $indigo:  #6610f2 !default;
-// $purple:  #6f42c1 !default;
-// $pink:    #d63384 !default;
 $red:     #dc3545 !default;
-// $orange:  #fd7e14 !default;
 $yellow:  #ffc107 !default;
 $green:   #198754 !default;
-// $teal:    #20c997 !default;
 $cyan:    #0dcaf0 !default;
 
 $primary:       $highlight-color !default;
@@ -39,16 +33,41 @@ $dark:          $gray-900 !default;
 
 $body-color: $text-color !default;
 $body-bg: $white !default;
+$body-tertiary-bg: $gray-200 !default;
 $text-muted: $gray-600 !default;
 $border-color: $gray-200 !default;
-$link-color: shade-color($highlight-color, 20%) !default;
+$link-color: shade-color($blue, 20%) !default;
 
 $btn-ghost-hover-color: mix($light, $dark, 90%);
+$btn-ghost-active-color: lighten($btn-ghost-hover-color, 5%);
+$btn-ghost-hover-color-dark: mix($dark, $light, 90%);
+$btn-ghost-active-color-dark: lighten($btn-ghost-hover-color-dark, 5%);
+
+:root {
+	--btn-ghost-hover-color: #{$btn-ghost-hover-color};
+	--btn-ghost-active-color: #{$btn-ghost-active-color};
+}
+[data-bs-theme="dark"] {
+	--btn-ghost-hover-color: #{$btn-ghost-hover-color-dark};
+	--btn-ghost-active-color: #{$btn-ghost-active-color-dark};
+}
+
+// no caret on dropdown-toggle
+$enable-caret: false;
+
+// disable smooth scroll, this makes window.scrollTo(0,0) in ajaxify.js take x milliseconds
+$enable-smooth-scroll: false;
+
+$enable-shadows: false;
+
+$link-decoration: none;
+$link-hover-decoration: none;
 
 // Custom fonts
 $font-family-sans-serif:  Source Sans Pro, Helvetica Neue, Helvetica, Arial, sans-serif !default;
 $font-family-secondary: $font-family-sans-serif !default;
 $font-weight-semibold: 500 !default;
+$small-font-size: 0.875rem !default;
 
 $breadcrumb-divider: quote("→");
 $breadcrumb-divider-color: $gray-500 !default;
@@ -58,13 +77,3 @@ $breadcrumb-item-padding-x: 12px !default;
 .form-control::placeholder, .bootstrap-tagsinput::placeholder {
 	color: $gray-500 !important;
 }
-
-
-// https://getbootstrap.com/docs/5.0/customize/options/
-$enable-rounded: true;
-$enable-shadows: false;
-$enable-gradients: false;
-$enable-caret: false;
-$enable-smooth-scroll: false;
-$link-decoration: none;
-$link-hover-decoration: none;
