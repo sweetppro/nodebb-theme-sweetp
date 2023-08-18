@@ -293,9 +293,6 @@ html#sweetp {
         background-color: var(--outline-color) !important;
     }
 
-    [component="chat/recent"] .active,
-    [component="chat/recent/room"]:hover,
-
 
     /* Notifications */
     @media (max-width: 575.97px) {
@@ -303,6 +300,7 @@ html#sweetp {
             justify-content: initial !important;
         }
     }
+    
 
     /* Badges */
     .badge {
