@@ -3,6 +3,8 @@
     supported-color-schemes: light dark;
 
     --white-color: #fff;
+    --off-white-color: #e4e4e4;
+    --medium-color: #929292;
     --black-color: #000;
 
     --text-color: #474747;
@@ -225,6 +227,11 @@ html#sweetp {
         border-radius: var(--bs-border-radius-sm);
     }
 
+
+    /* Menus */
+    .dropdown-item:hover i.hidden {
+        display: initial;
+    }
 
 
     /* Chat */
@@ -671,6 +678,13 @@ html#sweetp {
 
     /* dark theme */
     @media (prefers-color-scheme: dark) {
+
+        * {
+            --bs-dropdown-link-hover-color: var(--black-color);
+            --bs-secondary-color: var(--medium-color);
+            --bs-tooltip-color: var(--off-white-color);
+        }
+
         .hljs {
             color: #abb2bf;
             background: #282828;
