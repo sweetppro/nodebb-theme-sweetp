@@ -263,8 +263,6 @@ html#sweetp {
         }
     }
 
-    [component="chat/recent"] .active,
-    [component="chat/recent/room"]:hover,
     [component="notifications/list"] li:hover {
         background-color: var(--outline-color);
     }
@@ -283,13 +281,20 @@ html#sweetp {
     }
 
     [component="chat/recent"] .chat-room-btn,
-    [component="chat/recent"] .chat-room-btn:hover,
-    [component="chat/recent"] .mark-read:hover,
-    [component="chat/recent/room"] .chat-room-btn,
-    [component="chat/recent/room"] .chat-room-btn:hover,
-    [component="chat/recent/room"] .mark-read:hover {
+    [component="chat/recent/room"] .chat-room-btn {
         background-color: transparent !important;
     }
+
+    [component="chat/recent"] .active .chat-room-btn,
+    [component="chat/recent"] .chat-room-btn:hover,
+    [component="chat/recent"] .mark-read:hover,
+    [component="chat/recent/room"] .chat-room-btn:hover,
+    [component="chat/recent/room"] .mark-read:hover {
+        background-color: var(--outline-color) !important;
+    }
+
+    [component="chat/recent"] .active,
+    [component="chat/recent/room"]:hover,
 
 
     /* Notifications */
