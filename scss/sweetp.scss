@@ -272,6 +272,10 @@ html#sweetp {
         border-radius: var(--bs-border-radius-sm);
     }
 
+    [component="chat/user/list"] [data-uid].online [component="chat/user/list/username"] {
+        color: var(--text-color) !important;
+    }
+
     .chat-message .btn-group {
         background-color: var(--background-color);
     }
@@ -300,7 +304,7 @@ html#sweetp {
             justify-content: initial !important;
         }
     }
-    
+
 
     /* Badges */
     .badge {
