@@ -440,7 +440,7 @@ html#sweetp {
             color: var(--bs-dropdown-link-hover-color) !important;
         }
 
-        .bottombar .bottombar-nav .nav-link:hover {
+        .bottombar [data-bs-toggle="dropdown"]:hover {
             background-color: transparent !important;
         }
 
