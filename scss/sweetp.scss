@@ -51,6 +51,7 @@ html#sweetp {
         --bs-dropdown-color: var(--text-color) !important;
         --bs-dropdown-bg: var(--secondary-background-color) !important;
         --bs-dropdown-link-color: var(--text-color) !important;
+        --bs-dropdown-link-hover-color: var(--link-hover-color) !important;
 
         --bs-pagination-active-bg: var(--link-color);
         --bs-pagination-active-border-color: var(--link-color);
@@ -276,6 +277,10 @@ html#sweetp {
         color: var(--text-color) !important;
     }
 
+    [component="chat/message/remaining"] {
+        margin-left: 5px;
+    }
+
     .chat-message .btn-group {
         background-color: var(--background-color);
     }
@@ -433,6 +438,13 @@ html#sweetp {
 
         .bottombar .nav-link:hover .nav-text {
             color: var(--bs-dropdown-link-hover-color) !important;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            .bottombar .nav-link:hover .nav-text,
+            .bottombar .nav-link:hover {
+                color: var(--text-color) !important;
+            }
         }
     }
 
