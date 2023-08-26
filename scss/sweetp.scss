@@ -444,6 +444,10 @@ html#sweetp {
             background-color: transparent !important;
         }
 
+        .bottombar li.nav-item {
+            margin: 4px;
+        }
+
         @media (prefers-color-scheme: dark) {
             .bottombar .nav-link:hover .nav-text,
             .bottombar .nav-link:hover {
