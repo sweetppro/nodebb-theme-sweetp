@@ -116,6 +116,14 @@ html#sweetp {
         color: inherit !important;
     }
 
+    .bg-primary {
+        background-color: var(--link-color) !important;
+    }
+
+    .caret::after {
+        color: var(--off-white-color) !important;
+    }
+
 
     /* Composer */
     .skin-noskin .composer,
