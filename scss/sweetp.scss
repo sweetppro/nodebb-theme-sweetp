@@ -120,6 +120,10 @@ html#sweetp {
         background-color: var(--link-color) !important;
     }
 
+    .tool-modal {
+        background-color: var(--secondary-background-color) !important;
+    }
+
 
     /* Composer */
     .skin-noskin .composer,
@@ -241,6 +245,11 @@ html#sweetp {
     .dropdown-item:focus,
     .dropdown-item:hover {
         color: var(--off-white-color);
+    }
+
+    .dropdown-item:focus>.text-muted,
+    .dropdown-item:hover>.text-muted {
+        color: var(--off-white-color) !important;
     }
 
 
