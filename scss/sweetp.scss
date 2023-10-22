@@ -247,8 +247,8 @@ html#sweetp {
         color: var(--off-white-color);
     }
 
-    .dropdown-item:focus>.text-muted,
-    .dropdown-item:hover>.text-muted {
+    .dropdown-item:focus .text-muted,
+    .dropdown-item:hover .text-muted {
         color: var(--off-white-color) !important;
     }
 
