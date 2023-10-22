@@ -120,10 +120,6 @@ html#sweetp {
         background-color: var(--link-color) !important;
     }
 
-    .btn-primary>.caret::after {
-        color: var(--off-white-color) !important;
-    }
-
 
     /* Composer */
     .skin-noskin .composer,
@@ -240,6 +236,11 @@ html#sweetp {
     /* Menus */
     .dropdown-item:hover i.hidden {
         display: initial;
+    }
+
+    .dropdown-item:focus,
+    .dropdown-item:hover {
+        color: var(--bs-dropdown-link-color);
     }
 
 
@@ -461,6 +462,7 @@ html#sweetp {
         }
 
         @media (prefers-color-scheme: dark) {
+
             .bottombar .nav-link:hover .nav-text,
             .bottombar .nav-link:hover {
                 color: var(--text-color) !important;
@@ -622,6 +624,10 @@ html#sweetp {
     .btn-close.close:hover {
         color: var(--text-color);
         background: transparent url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23000'%3e%3cpath d='M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414z'/%3e%3c/svg%3e") center/1em auto no-repeat;
+    }
+
+    .btn-primary>.caret::after {
+        color: var(--off-white-color) !important;
     }
 
     @media (prefers-color-scheme: dark) {
