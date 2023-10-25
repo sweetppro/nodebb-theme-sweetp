@@ -18,7 +18,11 @@
     "sweetp"
   ],
   "nbbpm": {
-    "compatibility": "^3.0.0"
+    "compatibility": "^3.5.0"
+  },
+  "dependencies": {
+    "@fontsource/inter": "5.0.15",
+    "@fontsource/poppins": "5.0.8"
   },
   "main": "lib/theme.js",
   "license": "MIT"
