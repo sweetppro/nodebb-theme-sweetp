@@ -8,7 +8,7 @@
         { "hook": "filter:settings.get", "method": "getAdminSettings" },
         { "hook": "filter:user.saveSettings", "method": "saveUserSettings" },
         { "hook": "filter:user.profileMenu", "method": "addProfileItem" },
-        { "hook": "filter:middleware.render", "method": "removeFinalBreadcrumb" }
+        { "hook": "filter:middleware.renderHeader", "method": "filterMiddlewareRenderHeader" }
     ],
     "scripts": [
         "../nodebb-theme-harmony/public/harmony.js",
@@ -21,5 +21,10 @@
         "sweetp/customHelpers.js": "public/modules/customHelpers.js",
         "sweetp/customHelpers-common.js": "public/modules/customHelpers-common.js"
     },
+    "staticDirs": {
+        "inter": "node_modules/@fontsource/inter/files",
+        "poppins": "node_modules/@fontsource/poppins/files"
+    },
+    "languages": "../nodebb-theme-harmony/languages",
     "templates": "templates"
 }
