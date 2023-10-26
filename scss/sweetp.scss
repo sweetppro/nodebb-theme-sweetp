@@ -52,6 +52,8 @@ html#sweetp {
         --bs-dropdown-bg: var(--secondary-background-color) !important;
         --bs-dropdown-link-color: var(--text-color) !important;
         --bs-dropdown-link-hover-bg: var(--link-hover-color) !important;
+        --bs-dropdown-border-color: var(--outline-color) !important;
+        --bs-dropdown-divider-bg: var(--outline-color) !important;
 
         --bs-pagination-active-bg: var(--link-color);
         --bs-pagination-active-border-color: var(--link-color);
@@ -249,6 +251,7 @@ html#sweetp {
         border-bottom: 1px solid var(--outline-color);
     }
 
+    .dropdown-menu,
     .bottom-sheet .dropdown-menu,
     .sidebar-right .dropdown-menu {
         border-color: var(--outline-color);
