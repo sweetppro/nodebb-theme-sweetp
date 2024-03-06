@@ -758,7 +758,11 @@ html#sweetp {
         }
 
         .sidebar .nav-link:hover {
-            background-color: var(--outline-color) !important
+            background-color: var(--outline-color) !important;
+        }
+
+        .text-bg-light, blockquote {
+            color: var(--text-color) !important;
         }
 
         .hljs {
