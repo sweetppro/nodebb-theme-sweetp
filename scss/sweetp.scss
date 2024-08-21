@@ -202,6 +202,11 @@ html#sweetp {
         border-color: var(--text-color);
     }
 
+    .form-check-input:checked {
+        background-color: var(--link-color);
+        border-color: var(--link-color);
+    }
+
     /* Categories */
     .categories-list > li:first-child {
         padding-top: 0 !important;
