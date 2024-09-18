@@ -129,6 +129,11 @@ html#sweetp {
         background-color: var(--secondary-background-color) !important;
     }
 
+    /* Scrollbars */
+    ::-webkit-scrollbar-track {
+        background: transparent !important;
+    }
+
     /* Composer */
     .skin-noskin .composer,
     .composer {
@@ -578,6 +583,7 @@ html#sweetp {
     .btn-outline:hover,
     .btn-outline-sm.active,
     .btn-outline-sm:hover,
+    .btn.show,
     .page-topic .topic .posts [component="post/downvote"].downvoted,
     .page-topic .topic .posts [component="post/downvote"].upvoted,
     .page-topic .topic .posts [component="post/upvote"].downvoted,
