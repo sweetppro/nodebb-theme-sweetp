@@ -282,6 +282,10 @@ html#sweetp {
         color: var(--off-white-color) !important;
     }
 
+    .dropdown-menu .btn-ghost {
+        border-color: transparent;
+    }
+
     /* Chat */
     @media (min-width: 992px) {
         .chats-full {
