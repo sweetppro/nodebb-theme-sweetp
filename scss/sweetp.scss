@@ -844,9 +844,9 @@ html#sweetp {
         }
     }
 
-    /* login */
-    .login-block input::placeholder,
-    .login-block input:focus::placeholder {
+    /* placeholders */
+    input::placeholder,
+    input:focus::placeholder {
         color: var(--outline-color);
     }
 }
