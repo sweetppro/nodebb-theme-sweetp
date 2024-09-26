@@ -844,9 +844,11 @@ html#sweetp {
         }
     }
 
-    /* placeholders */
-    input::placeholder,
-    input:focus::placeholder {
+    /* login placeholders */
+    input#password::placeholder,
+    input#username::placeholder,
+    input#password:focus::placeholder
+    input#username:focus::placeholder {
         color: var(--outline-color);
     }
 
