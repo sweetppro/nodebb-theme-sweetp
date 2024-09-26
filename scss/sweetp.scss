@@ -849,4 +849,10 @@ html#sweetp {
     input:focus::placeholder {
         color: var(--outline-color);
     }
+
+    /* alerts */
+    .alert {
+        background-color: var(--secondary-background-color) !important;
+        border: 1px solid var(--outline-color);
+    }
 }
