@@ -844,17 +844,15 @@ html#sweetp {
         }
     }
 
-    /* login placeholders */
-    input#password::placeholder,
-    input#username::placeholder,
-    input#password:focus::placeholder
-    input#username:focus::placeholder {
-        color: var(--outline-color);
-    }
-
     /* alerts */
     .alert {
         background-color: var(--secondary-background-color) !important;
         border: 1px solid var(--outline-color);
     }
+}
+
+/* login placeholders */
+#login-form input::placeholder,
+#login-form input:focus::placeholder {
+    color: var(--outline-color) !important;
 }
