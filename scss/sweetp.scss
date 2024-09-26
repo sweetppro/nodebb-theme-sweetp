@@ -843,4 +843,10 @@ html#sweetp {
             color: #61aeee;
         }
     }
+
+    /* login */
+    .login-block input::placeholder,
+    .login-block input:focus::placeholder {
+        color: var(--outline-color);
+    }
 }
