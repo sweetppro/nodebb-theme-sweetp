@@ -286,21 +286,6 @@ html#sweetp {
         border-color: transparent;
     }
 
-    /* linkopacity */
-    a.linkopacity img,
-    a.bloglogo {
-        opacity: 1;
-        border: none;
-        transition: opacity 0.3s ease;
-    }
-
-    a.linkopacity:hover img,
-    a.bloglogo:hover {
-        opacity: 0.4;
-        border: none;
-    }
-    /* end linkopacity */
-
     /* Chat */
     @media (min-width: 992px) {
         .chats-full {
