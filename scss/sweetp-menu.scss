@@ -223,6 +223,19 @@ html#sweetp {
             saturate(1649%) hue-rotate(140deg) brightness(99%) contrast(81%);
     }
 
+    /* linkopacity */
+    a.linkopacity img {
+        opacity: 1;
+        border: none;
+        transition: opacity 0.3s ease;
+    }
+
+    a.linkopacity:hover img {
+        opacity: 0.4;
+        border: none;
+    }
+    /* end linkopacity */
+
     @media screen and (max-width: 414px) {
         label .title {
             position: absolute;
