@@ -132,25 +132,23 @@ html#sweetp {
         left: 50%;
         -webkit-transform: translate(-50%, -50%);
         transform: translate(-50%, -50%);
-        background-color: red;
         pointer-events: all;
         display: inline-block;
         opacity: 0;
+        /* cut out a 50x50px square over the hamburger menu to allow pointer events */
+        clip-path: polygon(
+            0% 0%,
+            0% 100%,
+            calc(100% - 60px) 100%,
+            calc(100% - 60px) 10px,
+            calc(100% - 10px) 10px,
+            calc(100% - 10px) 60px,
+            calc(100% - 60px) 60px,
+            calc(100% - 60px) 100%,
+            100% 100%,
+            100% 0%
+        );
         z-index: -1;
-    }
-
-    /* fake the hamburger cursor area - not working in Safari :( */
-    label input:checked + .sweetp-hamburger-menu + ul:after {
-        content: "";
-        position: absolute;
-        width: 60px;
-        height: 60px;
-        top: calc(50% - 50vh);
-        left: calc(50% + 50vw - 60px);
-        pointer-events: all;
-        display: inline-block;
-        cursor: pointer;
-        opacity: 0;
     }
 
     label ul {
