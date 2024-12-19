@@ -20,7 +20,35 @@
     --outline-color: rgba(71, 71, 71, 0.15);
     --emphasised-outline-color: rgba(71, 71, 71, 0.8);
 
+    --input-border-color: rgba(220, 220, 220, 0.5);
+    --input-text-color: #474747;
+    --input-focus-bg-color: #ffd;
+
     --bg-light-rgb: 248, 249, 250;
+}
+
+@supports not (-moz-appearance: none) {
+    input:hover::-webkit-contacts-auto-fill-button {
+        background-color: var(--link-color);
+    }
+
+    input:-webkit-autofill,
+    input:-webkit-autofill:hover,
+    input:-webkit-autofill:active,
+    input:-webkit-autofill:enabled {
+        -webkit-box-shadow: inset 0 0 0px 9999px var(--tertiary-background-color);
+        background-clip: content-box !important;
+        -webkit-text-fill-color: var(--input-text-color);
+        border: 1px solid var(--input-border-color) !important;
+    }
+
+    input:-webkit-autofill:focus,
+    input[type="number"]:-webkit-autofill:focus {
+        -webkit-box-shadow: inset 0 0 0px 9999px var(--input-focus-bg-color);
+        background-clip: content-box !important;
+        -webkit-text-fill-color: var(--input-text-color);
+        border: 1px solid var(--input-border-color)) !important;
+    }
 }
 
 @media (prefers-color-scheme: dark) {
@@ -33,6 +61,10 @@
 
         --outline-color: rgba(228, 228, 228, 0.15);
         --emphasised-outline-color: rgba(228, 228, 228, 0.8);
+
+        --input-border-color: rgba(45, 45, 45, 0.9);
+        --input-text-color: #e4e4e4;
+        --input-focus-bg-color: #111;
 
         --bg-light-rgb: 38, 37, 36;
     }
