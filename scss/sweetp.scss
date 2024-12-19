@@ -100,12 +100,14 @@ html#sweetp {
         input:-webkit-autofill:hover,
         input:-webkit-autofill:active,
         input:-webkit-autofill:enabled {
+            background-color: var(--tertiary-background-color) !important;
             -webkit-box-shadow: inset 0 0 0px 9999px var(--tertiary-background-color) !important;
             -webkit-text-fill-color: var(--input-text-color);
         }
 
         input:-webkit-autofill:focus,
         input[type="number"]:-webkit-autofill:focus {
+            background-color: var(--input-focus-bg-color) !important;
             -webkit-box-shadow: inset 0 0 0px 9999px var(--input-focus-bg-color) !important;
             -webkit-text-fill-color: var(--input-text-color);
         }
