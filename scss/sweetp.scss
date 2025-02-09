@@ -510,6 +510,10 @@ html#sweetp {
     }
 
     @media (min-width: 992px) {
+        .container {
+            --bs-gutter-x: 105px;
+        }
+
         ul#logged-in-menu,
         ul#logged-out-menu {
             margin-top: 110px !important;
