@@ -3,7 +3,14 @@
         </main>
         <!-- IMPORT partials/sidebar-right.tpl -->
       </div>
-      <!-- IMPORT partials/mobile-footer.tpl -->
+      {{{ if !config.theme.topMobilebar }}}
+    	<!-- IMPORT partials/mobile-footer.tpl -->
+    	{{{ else }}}
+    	<div class="fixed-bottom navigator-mobile d-lg-none">
+    		<!-- IMPORT partials/topic/navigator-mobile.tpl -->
+    	</div>
+      {{{ end }}}
+
       {{{ if !isSpider }}}
       <div class="row">
         <div component="toaster/tray" class="col-12 col-md-3 alert-window fixed-bottom pb-3 mb-5 mb-md-2 me-md-5 ms-auto">

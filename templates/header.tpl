@@ -26,7 +26,11 @@
 	{{{end}}}
 </head>
 
-<body class="{bodyClass} skin-noskin">
+<body class="{bodyClass} skin-{{{if bootswatchSkin}}}{bootswatchSkin}{{{else}}}noskin{{{end}}}">
+    {{{ if config.theme.topMobilebar }}}
+	<!-- IMPORT partials/mobile-header.tpl -->
+	{{{ end }}}
+
 	<div id="sweetp-wrapper">
 		<div class="d-flex justify-content-between pb-4 pb-md-0">
 			<!-- IMPORT partials/sidebar-left.tpl -->

@@ -1,6 +1,6 @@
 {
   "name": "nodebb-theme-harmony-sweetp",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "author": {
     "name": "SweetP Productions, Inc",
     "url": "https://sweetpproductions.com"
@@ -18,7 +18,7 @@
     "sweetp"
   ],
   "nbbpm": {
-    "compatibility": "^3.7.0"
+    "compatibility": "^4.0.0"
   },
   "dependencies": {
     "@fontsource/inter": "5.0.15",
