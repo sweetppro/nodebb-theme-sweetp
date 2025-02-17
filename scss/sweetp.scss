@@ -466,6 +466,19 @@ html#sweetp {
     }
 
     /* Nav */
+    .bottombar.sticky-top {
+        z-index: 9020;
+    }
+
+    .bottombar.sticky-top .bottombar-nav-right,
+    .bottombar.sticky-top .bottombar-nav-right #search-fields {
+        margin-right: 105px;
+    }
+
+    .bottombar #search-fields a:hover i {
+        color: var(--white-color) !important;
+    }
+
     .topic .sticky-top {
         top: 110px !important;
     }
