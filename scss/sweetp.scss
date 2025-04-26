@@ -162,18 +162,6 @@ html#sweetp {
     }
 
     /* Topics */
-    [component="post"] {
-        background-color: var(--secondary-background-color);
-        border-radius: var(--bs-border-radius);
-        border: 1px solid var(--outline-color);
-        padding: 1rem 1rem 1rem 0;
-        margin-left: -0.5rem;
-    }
-
-    [component="post/footer"] {
-        border-bottom: none !important;
-    }
-
     body.template-topic .topic .posts.timeline .timeline-event,
     body.template-topic .topic .posts.timeline > [component="post/placeholder"],
     body.template-topic .topic .posts.timeline > [component="post"] {
@@ -194,18 +182,7 @@ html#sweetp {
         background-color: transparent !important;
     }
 
-    body.template-topic
-        .topic
-        .posts.timeline
-        .timeline-event:last-child::after,
-    body.template-topic
-        .topic
-        .posts.timeline
-        > [component="post/placeholder"]:last-child::after,
-    body.template-topic
-        .topic
-        .posts.timeline
-        > [component="post"]:last-child::after {
+    body.template-topic .topic .posts.timeline .timeline-event:last-child::after, body.template-topic .topic .posts.timeline > [component="post/placeholder"]:last-child::after, body.template-topic .topic .posts.timeline > [component="post"]:last-child::after {
         background-color: var(--outline-color) !important;
     }
 
