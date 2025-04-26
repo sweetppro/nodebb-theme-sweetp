@@ -164,7 +164,8 @@ html#sweetp {
     /* Topics */
     body.template-topic .topic .posts.timeline .timeline-event,
     body.template-topic .topic .posts.timeline > [component="post/placeholder"],
-    body.template-topic .topic .posts.timeline > [component="post"] {
+    body.template-topic .topic .posts.timeline > [component="post"],
+   .topic .pagination-block .scroller-container {
         border-left: 1px solid var(--outline-color) !important;
     }
 
