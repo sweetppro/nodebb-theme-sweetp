@@ -165,7 +165,7 @@ html#sweetp {
     body.template-topic .topic .posts.timeline .timeline-event,
     body.template-topic .topic .posts.timeline > [component="post/placeholder"],
     body.template-topic .topic .posts.timeline > [component="post"],
-   .topic .pagination-block .scroller-container {
+    .topic .pagination-block .scroller-container {
         border-left: 1px solid var(--outline-color) !important;
     }
 
@@ -183,7 +183,18 @@ html#sweetp {
         background-color: transparent !important;
     }
 
-    body.template-topic .topic .posts.timeline .timeline-event:last-child::after, body.template-topic .topic .posts.timeline > [component="post/placeholder"]:last-child::after, body.template-topic .topic .posts.timeline > [component="post"]:last-child::after {
+    body.template-topic
+        .topic
+        .posts.timeline
+        .timeline-event:last-child::after,
+    body.template-topic
+        .topic
+        .posts.timeline
+        > [component="post/placeholder"]:last-child::after,
+    body.template-topic
+        .topic
+        .posts.timeline
+        > [component="post"]:last-child::after {
         background-color: var(--outline-color) !important;
     }
 
