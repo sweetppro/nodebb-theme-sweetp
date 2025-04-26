@@ -182,6 +182,10 @@ html#sweetp {
         background-color: transparent !important;
     }
 
+    body.template-topic .topic .posts.timeline .timeline-event:last-child::after, body.template-topic .topic .posts.timeline > [component="post/placeholder"]:last-child::after, body.template-topic .topic .posts.timeline > [component="post"]:last-child::after {
+        background-color: var(--outline-color) !important;
+    }
+
     /* Scrollbars */
     ::-webkit-scrollbar-track {
         background: transparent !important;
