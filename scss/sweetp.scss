@@ -161,6 +161,27 @@ html#sweetp {
         background-color: var(--secondary-background-color) !important;
     }
 
+    /* Topics */
+    body.template-topic .topic .posts.timeline .timeline-event,
+    body.template-topic .topic .posts.timeline > [component="post/placeholder"],
+    body.template-topic .topic .posts.timeline > [component="post"] {
+        border-left: 1px solid var(--outline-color) !important;
+    }
+
+    body.template-topic
+        .topic
+        .posts.timeline
+        [component="topic/event"].timeline-event
+        .timeline-badge,
+    body.template-topic
+        .topic
+        .posts.timeline
+        [component="topic/necro-post"].timeline-event
+        .timeline-badge {
+        border: none !important;
+        background-color: transparent !important;
+    }
+
     /* Scrollbars */
     ::-webkit-scrollbar-track {
         background: transparent !important;
