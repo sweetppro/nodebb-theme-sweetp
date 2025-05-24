@@ -383,6 +383,14 @@ html#sweetp {
             height: 60vh !important;
             width: calc(100vw - 20px);
         }
+
+        /* Topics */
+        body.template-topic .topic .posts.timeline .timeline-event,
+        body.template-topic .topic .posts.timeline > [component="post/placeholder"],
+        body.template-topic .topic .posts.timeline > [component="post"],
+        .topic .pagination-block .scroller-container {
+            border-left: none !important;
+        }
     }
 
     [component="notifications/list"] li:hover {
