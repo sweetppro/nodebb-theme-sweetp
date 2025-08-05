@@ -360,28 +360,24 @@ html#sweetp {
     @media (min-width: 992px) {
         .chats-full {
             height: calc(100vh - 100px) !important;
-            width: calc(100vw - 130px);
         }
     }
 
     @media (min-width: 768px) and (max-width: 991.97px) {
         .chats-full {
             height: calc(100vh - 160px) !important;
-            width: calc(100vw - 20px);
         }
     }
 
     @media (max-width: 767.97px) {
         .chats-full {
             height: calc(100vh - 185px) !important;
-            width: calc(100vw - 20px);
         }
     }
 
     @media (max-width: 575.97px) {
         .chats-full {
             height: 60vh !important;
-            width: calc(100vw - 20px);
         }
 
         /* Topics */
@@ -423,6 +419,7 @@ html#sweetp {
     [component="chat/recent"] .chat-room-btn,
     [component="chat/recent/room"] .chat-room-btn {
         background-color: transparent !important;
+        border: none;
     }
 
     [component="chat/recent"] .active .chat-room-btn,
