@@ -321,6 +321,12 @@ html#sweetp {
     }
 
     /* Menus */
+    @media screen and (max-width: 414px) {
+        .page-user-chats .sweetp-menu {
+            margin-bottom: 80px;
+        }
+    }
+
     .skin-noskin .bottombar .dropdown-menu {
         color: var(--bs-dropdown-color) !important;
         background-color: var(--bs-dropdown-bg) !important;
@@ -377,7 +383,7 @@ html#sweetp {
 
     @media (max-width: 575.97px) {
         .chats-full {
-            height: 60vh !important;
+            height: calc(100vh - 160px) !important;
         }
 
         /* Topics */
