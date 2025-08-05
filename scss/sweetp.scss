@@ -383,7 +383,7 @@ html#sweetp {
 
     @media (max-width: 575.97px) {
         .chats-full {
-            height: calc(100vh - 160px) !important;
+            height: calc(100vh - 200px) !important;
         }
 
         /* Topics */
@@ -596,7 +596,7 @@ html#sweetp {
         }
 
         .nav-link:hover {
-            color: var(--bs-dropdown-link-hover-color);
+            color: var(--white-color);
             background-color: var(--bs-dropdown-link-hover-bg);
         }
 
