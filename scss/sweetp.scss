@@ -792,7 +792,7 @@ html#sweetp {
                 center/1em auto no-repeat;
         }
 
-        .group-hover-bg:hover a.text-reset {
+        .group-hover-bg:hover a.text-reset .card-body {
             background-color: var(--card-background-color);
         }
     }
