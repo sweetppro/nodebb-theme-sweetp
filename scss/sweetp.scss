@@ -706,6 +706,10 @@ html#sweetp {
         background-color: var(--outline-color) !important;
     }
 
+    .group-hover-bg {
+        border: 1px solid var(--outline-color) !important;
+    }
+
     .group-hover-bg .card-body {
         border: none !important;
     }
