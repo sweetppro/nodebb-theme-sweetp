@@ -793,7 +793,7 @@ html#sweetp {
         }
 
         .group-hover-bg:hover a.text-reset .card-body {
-            background-color: var(--card-background-color);
+            background-color: var(--card-background-color) !important;
         }
     }
 
