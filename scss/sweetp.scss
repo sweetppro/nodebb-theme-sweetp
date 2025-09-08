@@ -198,6 +198,11 @@ html#sweetp {
         background-color: var(--outline-color) !important;
     }
 
+    /* Posts */
+    li[component="post"].selected .post-container {
+        background-color: var(--background-color);
+    }
+
     /* Scrollbars */
     ::-webkit-scrollbar-track {
         background: transparent !important;
@@ -284,6 +289,10 @@ html#sweetp {
     .form-check-input:checked {
         background-color: var(--link-color);
         border-color: var(--link-color);
+    }
+
+    .input-group .input-group-text {
+        background-color: var(--secondary-background-color);
     }
 
     /* Categories */
