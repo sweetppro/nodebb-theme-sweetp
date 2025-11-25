@@ -1,6 +1,6 @@
 {
   "name": "nodebb-theme-harmony-sweetp",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "author": {
     "name": "SweetP Productions, Inc",
     "url": "https://sweetpproductions.com"
@@ -21,8 +21,12 @@
     "compatibility": "^4.0.0"
   },
   "dependencies": {
-    "@fontsource/inter": "5.0.15",
-    "@fontsource/poppins": "5.0.8"
+    "@fontsource/inter": "5.2.8",
+    "@fontsource/poppins": "5.2.7"
+  },
+  "devDependencies": {
+    "eslint": "9.39.1",
+    "eslint-config-nodebb": "^1.1.4"
   },
   "main": "lib/theme.js",
   "license": "MIT"
