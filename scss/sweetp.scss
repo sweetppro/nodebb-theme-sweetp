@@ -390,6 +390,15 @@ html#sweetp {
         }
     }
 
+    @media (max-width: 575.98px) html.composing.emoji-insert .composer {
+        bottom: calc(40%);
+        height: auto;
+    }
+
+    @media (max-width: 575.98px) and (max-height: 600px) .emoji-dialog {
+        top: 60% !important;
+    }
+
     @media (max-width: 575.97px) {
         .chats-full {
             height: calc(100vh - 200px) !important;
@@ -516,6 +525,7 @@ html#sweetp {
     /* Emojis */
     .emoji-dialog {
         background: var(--secondary-background-color);
+        z-index: 100001;
     }
 
     /* Images */
