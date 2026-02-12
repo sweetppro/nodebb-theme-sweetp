@@ -43,6 +43,8 @@
         --input-focus-bg-color: #111;
 
         --bg-light-rgb: 38, 37, 36;
+
+        --border-radius: 5px;
     }
 }
 
@@ -87,6 +89,8 @@ html#sweetp {
         --bs-light-rgb: var(--bg-light-rgb);
 
         --bs-tooltip-zindex: 10055;
+
+        --bs-border-radius-sm: var(--border-radius);
 
         box-shadow: none !important;
     }
