@@ -1,5 +1,4 @@
 html#sweetp {
-
     #sweetp-footer {
         position: absolute;
         height: 50px;
@@ -10,7 +9,15 @@ html#sweetp {
         font-size: 12px;
         padding: 15px;
         color: #474747;
-        font-family: Source Sans Pro, Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-family:
+            Source Sans Pro,
+            Helvetica Neue,
+            Helvetica,
+            Arial,
+            sans-serif;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
     }
 
     #sweetp-footer ul li {
@@ -44,7 +51,6 @@ html#sweetp {
     }
 
     @media (prefers-color-scheme: dark) {
-
         #sweetp-footer {
             color: #e4e4e4 !important;
         }
