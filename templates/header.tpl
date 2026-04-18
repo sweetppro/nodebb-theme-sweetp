@@ -34,12 +34,12 @@
 	{{{ end }}}
 
 	<div id="sweetp-wrapper">
+	    <!-- IMPORT sweetp_header.tpl -->
 	    <div class="layout-container d-flex justify-content-between pb-4 pb-md-0">
 			<!-- IMPORT partials/sidebar-left.tpl -->
 
 			<main id="panel" class="d-flex flex-column gap-3 flex-grow-1 mt-3" style="min-width: 0;">
 				<!-- IMPORT partials/header/brand.tpl -->
-				<!-- IMPORT sweetp_header.tpl -->
 				<script>
 					const headerEl = document.getElementById('header-menu');
 					if (headerEl) {

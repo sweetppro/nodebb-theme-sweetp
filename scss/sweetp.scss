@@ -48,6 +48,8 @@
 }
 
 html#sweetp {
+    height: 100%;
+    position: relative;
     * {
         --bs-body-bg: var(--background-color);
         --bs-body-color: var(--text-color);
@@ -119,22 +121,44 @@ html#sweetp {
     }
 
     /* General */
+    body {
+        position: relative;
+        min-height: 100%;
+    }
+
     #sweetp-wrapper {
         width: 100%;
-        min-height: 100vh;
-        position: relative;
-        display: flex;
-        flex-direction: column;
+        min-height: 100dvh;
+        position: absolute;
+        top: 0;
+    }
+
+    .sweetp-menu {
+        margin-bottom: initial !important;
+        display: inline;
     }
 
     @media (max-width: 991.98px) {
         #sweetp-wrapper {
-            overflow-x: clip;
+            min-height: initial;
+            bottom: 0;
+            overflow: scroll;
+            position: fixed;
+            height: -webkit-fill-available;
+        }
+
+        #sweetp-footer {
+            position: relative !important;
+        }
+
+        label .sweetp-hamburger-menu,
+        label .sweetp-hamburger-menu::after {
+            position: fixed !important;
         }
     }
 
     #panel {
-        margin-top: 0 !important;
+        margin-top: 50px !important;
         margin-bottom: 100px;
     }
 
@@ -333,12 +357,6 @@ html#sweetp {
     }
 
     /* Menus */
-    @media screen and (max-width: 414px) {
-        .page-user-chats .sweetp-menu {
-            margin-bottom: 80px;
-        }
-    }
-
     .skin-noskin .bottombar .dropdown-menu {
         color: var(--bs-dropdown-color) !important;
         background-color: var(--bs-dropdown-bg) !important;
@@ -635,14 +653,26 @@ html#sweetp {
 
         .bottombar [data-bs-toggle="dropdown"]:hover {
             background-color: transparent !important;
+            color: var(--text-color) !important;
         }
 
-        .bottombar .navigation-dropdown {
+        .bottombar .dropdown-menu {
             padding: 0px;
+            transform: translate3d(0px, -69px, 0px) !important;
+            border-bottom: none;
         }
 
-        .bottombar li.nav-item {
+        .bottombar li.nav-item a {
             margin: 4px;
+        }
+
+        .bottombar {
+            border-top: 1px solid var(--outline-color);
+            transition: none !important;
+        }
+
+        .bottombar-nav {
+            border-top: none !important;
         }
 
         @media (prefers-color-scheme: dark) {
@@ -992,7 +1022,6 @@ html#sweetp {
 
     /* alerts */
     .alert {
-        background-color: var(--secondary-background-color) !important;
         border: 1px solid var(--outline-color);
     }
 }

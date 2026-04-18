@@ -4,9 +4,10 @@ html#sweetp {
     }
 
     label .title {
-        position: relative;
+        position: absolute;
         top: 20px;
-        left: 20px;
+        left: 65px;
+        z-index: 9000;
         font-family:
             Source Sans Pro,
             Helvetica Neue,
@@ -35,31 +36,58 @@ html#sweetp {
         float: left;
         margin: 0 5px 0 0;
         z-index: 9000;
-        filter: brightness(0) saturate(100%) invert(23%) sepia(0%)
-            saturate(240%) hue-rotate(245deg) brightness(101%) contrast(83%);
+        filter: brightness(0) saturate(100%) invert(23%) sepia(0%) saturate(240%)
+            hue-rotate(245deg) brightness(101%) contrast(83%);
     }
 
     label .sweetp-hamburger-menu {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        content: "";
+        width: 100%;
+        height: 100%;
+        z-index: 9999;
+        pointer-events: none;
+    }
+
+    label .sweetp-hamburger-menu::before {
         position: fixed;
         right: -100px;
         top: -100px;
-        z-index: 10000;
+        content: "";
         width: 200px;
         height: 200px;
+        z-index: 9999;
         background: #e4e4e4;
         border-radius: 50% 50% 50% 50%;
-        transition: 0.5s ease-in-out;
-        box-shadow:
-            0 0 0 0 #e4e4e4,
-            0 0 0 0 #e4e4e4 !important;
-        cursor: pointer;
         pointer-events: all;
+        cursor: pointer;
+    }
+
+    label .sweetp-hamburger-menu::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: calc(100% + 1px);
+        z-index: 10000;
+        background: #e4e4e4;
+        transition: opacity 0.5s ease-in-out;
+        cursor: none;
+        pointer-events: none;
+        opacity: 0;
     }
 
     label .hamburger {
-        position: absolute;
-        top: 135px;
-        left: 50px;
+        position: fixed;
+        top: 35px;
+        right: 25px;
         width: 30px;
         height: 2px;
         background: #000;
@@ -67,6 +95,7 @@ html#sweetp {
         -webkit-transform-origin: center;
         transform-origin: center;
         transition: 0.5s ease-in-out;
+        z-index: 10001;
     }
 
     label .hamburger:after,
@@ -88,15 +117,12 @@ html#sweetp {
         bottom: -10px;
     }
 
-    label.sweetp-menu input {
+    label input {
         display: none;
     }
 
-    label input:checked + .sweetp-hamburger-menu {
-        box-shadow:
-            0 0 0 100vw #e4e4e4,
-            0 0 0 100vh #e4e4e4 !important;
-        border-radius: 0;
+    label input:checked + .sweetp-hamburger-menu::after {
+        opacity: 1;
     }
 
     label input:checked + .sweetp-hamburger-menu .hamburger {
@@ -158,7 +184,7 @@ html#sweetp {
         -webkit-transform: translate(-50%, -50%);
         transform: translate(-50%, -50%);
         opacity: 0;
-        transition: 0.25s 0s ease-in-out;
+        transition: opacity 0.25s ease-in-out;
         text-align: center;
         white-space: nowrap;
         list-style-type: none;
@@ -193,11 +219,12 @@ html#sweetp {
     label ul a,
     label ul a:visited {
         color: #656565 !important;
-        transition: all 0.3s ease;
+        transition: all 0.3s ease-in-out;
     }
 
     label ul a:hover {
         color: #474747 !important;
+        transform: scale(1.2);
     }
 
     #bitcoin_social {
@@ -215,25 +242,19 @@ html#sweetp {
         width: 30px;
         padding: 0 !important;
         display: inline-block;
+        margin: 0 10px;
     }
 
     .twitter {
-        filter: brightness(0) saturate(100%) invert(38%) sepia(0%)
-            saturate(1649%) hue-rotate(140deg) brightness(99%) contrast(81%);
+        filter: brightness(0) saturate(100%) invert(38%) sepia(0%) saturate(1649%)
+            hue-rotate(140deg) brightness(99%) contrast(81%);
     }
 
-    /* linkopacity */
-    a.linkopacity img {
-        opacity: 1;
-        border: none;
-        transition: opacity 0.3s ease;
+    @media (max-width: 991.98px) {
+        label .title {
+            left: 20px;
+        }
     }
-
-    a.linkopacity:hover img {
-        opacity: 0.4;
-        border: none;
-    }
-    /* end linkopacity */
 
     @media screen and (max-width: 414px) {
         label .title {
@@ -296,17 +317,9 @@ html#sweetp {
             color: #e4e4e4 !important;
         }
 
-        label .sweetp-hamburger-menu {
+        label .sweetp-hamburger-menu::before,
+        label .sweetp-hamburger-menu::after {
             background: #171717;
-            box-shadow:
-                0 0 0 0 #171717,
-                0 0 0 0 #171717 !important;
-        }
-
-        label input:checked + .sweetp-hamburger-menu {
-            box-shadow:
-                0 0 0 100vw #171717,
-                0 0 0 100vh #171717 !important;
         }
 
         label .hamburger,
@@ -325,8 +338,8 @@ html#sweetp {
         }
 
         .twitter {
-            filter: brightness(0) saturate(100%) invert(76%) sepia(3%)
-                saturate(44%) hue-rotate(332deg) brightness(94%) contrast(93%);
+            filter: brightness(0) saturate(100%) invert(76%) sepia(3%) saturate(44%)
+                hue-rotate(332deg) brightness(94%) contrast(93%);
         }
     }
 }
