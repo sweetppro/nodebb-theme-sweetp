@@ -9,7 +9,8 @@
         { "hook": "filter:settings.get", "method": "getAdminSettings" },
         { "hook": "filter:user.saveSettings", "method": "saveUserSettings" },
         { "hook": "filter:user.profileMenu", "method": "addProfileItem" },
-        { "hook": "filter:middleware.renderHeader", "method": "filterMiddlewareRenderHeader" }
+        { "hook": "filter:middleware.renderHeader", "method": "filterMiddlewareRenderHeader" },
+        { "hook": "filter:meta.addSiteOGImage", "method": "setSiteOGImage" }
     ],
     "scripts": [
         "../nodebb-theme-harmony/public/harmony.js",
