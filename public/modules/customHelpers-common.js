@@ -11,6 +11,7 @@ module.exports = function(Benchpress) {
 
             return '<meta ' + name + property + content + '/>\n\t';
         }
+        return '';
     };
 
     const customHelpers = {

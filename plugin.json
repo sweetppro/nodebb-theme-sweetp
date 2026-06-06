@@ -22,10 +22,6 @@
         "sweetp/customHelpers.js": "public/modules/customHelpers.js",
         "sweetp/customHelpers-common.js": "public/modules/customHelpers-common.js"
     },
-    "staticDirs": {
-        "inter": "node_modules/@fontsource/inter/files",
-        "poppins": "node_modules/@fontsource/poppins/files"
-    },
     "languages": "../nodebb-theme-harmony/languages",
     "templates": "templates"
 }
