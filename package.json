@@ -1,6 +1,6 @@
 {
   "name": "nodebb-theme-harmony-sweetp",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "author": {
     "name": "SweetP Productions, Inc",
     "url": "https://sweetpproductions.com"
@@ -14,15 +14,16 @@
     "nodebb",
     "theme",
     "forum",
+    "bootstrap",
     "responsive",
     "sweetp"
   ],
   "nbbpm": {
-    "compatibility": "^4.0.0"
+    "compatibility": "^4.14.0"
   },
   "devDependencies": {
-    "eslint": "9.39.1",
-    "eslint-config-nodebb": "^1.1.4"
+    "eslint": "10.6.0",
+    "eslint-config-nodebb": "^2.0.2"
   },
   "main": "lib/theme.js",
   "license": "MIT"
