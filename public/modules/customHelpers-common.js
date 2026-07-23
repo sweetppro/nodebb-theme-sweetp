@@ -5,13 +5,9 @@
 module.exports = function (Benchpress) {
   const buildSweetPMetaTag = (tag) => {
     const name = tag.name ? `name="${escape(tag.name)}" ` : "";
-    if (tag.name !== "theme-color") {
-      const property = tag.property
-        ? `property="${escape(tag.property)}" `
-        : "";
-      const content = tag.content
-        ? `content="${escape(tag.content).replace(/\n/g, " ")}" `
-        : "";
+    if (tag.name !== "theme-color" && tag.name !== "viewport") {
+      const property = tag.property ? `property="${escape(tag.property)}" ` : "";
+      const content = tag.content ? `content="${escape(tag.content).replace(/\n/g, " ")}" ` : "";
 
       return '<meta ' + name + property + content + '/>\n\t';
     }
