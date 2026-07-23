@@ -1,6 +1,6 @@
 {
   "name": "nodebb-theme-harmony-sweetp",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "author": {
     "name": "SweetP Productions, Inc",
     "url": "https://sweetpproductions.com"
@@ -25,7 +25,7 @@
     "nodebb-theme-harmony": "^3.1.6"
   },
   "devDependencies": {
-    "eslint": "10.6.0",
+    "eslint": "10.7.0",
     "eslint-config-nodebb": "^2.0.2"
   },
   "main": "lib/theme.js",
