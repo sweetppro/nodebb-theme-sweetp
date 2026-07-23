@@ -15,7 +15,6 @@
 		var app = {
 			user: JSON.parse('{{userJSON}}')
 		};
-
 		document.documentElement.style.setProperty('--panel-offset', `0px`);
 	</script>
 
@@ -28,7 +27,7 @@
 </head>
 
 <body class="{bodyClass} skin-{{{if bootswatchSkin}}}{bootswatchSkin}{{{else}}}noskin{{{end}}}">
-	<a class="visually-hidden-focusable position-absolute top-0 start-0 p-3 m-3 bg-body" style="z-index: 1021;" href="#content">[[global:skip-to-content]]</a>
+	<a class="visually-hidden-focusable position-absolute top-0 start-0 p-3 m-3 bg-body" style="z-index: 1021;" href="#content">{{tx("global:skip-to-content")}}</a>
 
     {{{ if config.theme.topMobilebar }}}
 	<!-- IMPORT partials/mobile-header.tpl -->
