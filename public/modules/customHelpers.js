@@ -2,6 +2,6 @@
 
 const factory = require('./customHelpers-common');
 
-define(['benchpress'], function (Benchpressjs) {
-    return factory(Benchpressjs);
+define(['utils', 'benchpress'], function (utils, Benchpressjs) {
+    return factory(utils, Benchpressjs);
 });

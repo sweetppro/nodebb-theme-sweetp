@@ -2,7 +2,6 @@
 <html id="sweetp" lang="{localeToHTML(userLang, defaultLang)}" {{{if languageDirection}}}data-dir="{languageDirection}" style="direction: {languageDirection};"{{{end}}}>
 <head>
 	<title>{browserTitle}</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 	<meta name="color-scheme" content="dark light">
 	<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
 	<meta name="theme-color" content="#1e1e1e" media="(prefers-color-scheme: dark)">
