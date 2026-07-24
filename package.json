@@ -1,6 +1,6 @@
 {
   "name": "nodebb-theme-harmony-sweetp",
-  "version": "1.0.8",
+  "version": "1.1.0",
   "author": {
     "name": "SweetP Productions, Inc",
     "url": "https://sweetpproductions.com"
@@ -19,7 +19,7 @@
     "sweetp"
   ],
   "nbbpm": {
-    "compatibility": "^4.14.1"
+    "compatibility": "^4.14.2"
   },
   "dependencies": {
     "nodebb-theme-harmony": "^3.1.6"

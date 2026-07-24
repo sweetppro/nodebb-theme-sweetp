@@ -3,21 +3,20 @@
 /* globals */
 
 module.exports = function (Benchpress) {
-
   const buildSweetPMetaTag = (tag) => {
-  	const name = tag.name ? 'name="' + tag.name + '" ' : '';
-    if (tag.name !== "theme-color") {
-    	const property = tag.property ? 'property="' + tag.property + '" ' : '';
-     	const content = tag.content ? 'content="' + tag.content.replace(/\n/g, ' ') + '" ' : '';
+    const name = tag.name ? `name="${escape(tag.name)}" ` : "";
+    if (tag.name !== "theme-color" && tag.name !== "viewport") {
+      const property = tag.property ? `property="${escape(tag.property)}" ` : "";
+      const content = tag.content ? `content="${escape(tag.content).replace(/\n/g, " ")}" ` : "";
 
       return '<meta ' + name + property + content + '/>\n\t';
     }
     return "";
-	}
+  };
 
   const customHelpers = {
-		buildSweetPMetaTag,
-   };
+    buildSweetPMetaTag,
+  };
 
   function register() {
     Object.keys(customHelpers).forEach((helperName) => {
@@ -25,7 +24,7 @@ module.exports = function (Benchpress) {
     });
   }
 
-	register();
+  register();
 
   return customHelpers;
 };
