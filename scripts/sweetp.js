@@ -47,7 +47,7 @@ $(document).ready(function() {
     var yyyy = today.getFullYear();
 
     var footer = document.getElementById('sweetp-footer');
-    footer.innerHTML = '<p>Copyright &copy; ' + yyyy + ' <a href="https://sweetpproductions.com">SweetP Productions, Inc.</a> All rights reserved.</p>';
+    footer.innerHTML = '<div>Copyright &copy; ' + yyyy + '</div><div><a href="https://sweetpproductions.com">SweetP Productions, Inc.</a></div><div>All rights reserved.</div>';
 
     checkFooter();
 });

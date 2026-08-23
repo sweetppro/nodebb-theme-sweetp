@@ -1,53 +1,52 @@
 html#sweetp {
     #sweetp-footer {
-        position: absolute;
-        height: 50px;
-        width: 100%;
-        bottom: 0;
-        text-align: center;
-        font-style: normal;
-        font-size: 12px;
-        padding: 15px;
-        color: #474747;
-        font-family:
-            Source Sans Pro,
-            Helvetica Neue,
-            Helvetica,
-            Arial,
-            sans-serif;
-        display: inline-flex;
-        justify-content: center;
-        align-items: center;
+        min-height: 50px;
+            width: 100%;
+            text-align: center;
+            font-style: normal;
+            font-size: 12px;
+            background-color: #d3d3d3;
+            color: #474747;
+            line-height: 1em;
+            font-family:
+                Source Sans Pro,
+                Helvetica Neue,
+                Helvetica,
+                Arial,
+                sans-serif;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            gap: 0.3em;
+            letter-spacing: 0.1px;
+            -webkit-text-size-adjust: 100%;
+            -moz-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+            text-size-adjust: 100%;
+            font-feature-settings: normal;
     }
 
-    #sweetp-footer ul li {
-        display: inline-block;
-        list-style-type: none;
-        padding: 5px;
-        text-align: left;
-    }
-
-    #sweetp-footer p {
-        margin-bottom: 0;
+    #sweetp-footer > div,
+    #sweetp-footer p,
+    #sweetp-footer ul,
+    #sweetp-footer li {
         line-height: 1em;
         margin: 0;
         padding: 0;
-        -webkit-text-size-adjust: 100%;
-        -moz-text-size-adjust: 100%;
-        -ms-text-size-adjust: 100%;
-        text-size-adjust: 100%;
-        letter-spacing: 0.1px;
-        font-feature-settings: normal;
+    }
+
+    #sweetp-footer a {
+        display: inline;
+        padding: 0;
+        border-radius: 0;
+        border: none;
     }
 
     #sweetp-footer a:link,
-    #sweetp-footer a:visited {
-        background: inherit;
+    #sweetp-footer a:visited,
+    #sweetp-footer a:hover {
+        background-color: inherit;
         color: #428c46;
-    }
-
-    #sweetp-footer ul li:last-child {
-        margin-bottom: 2em;
     }
 
     @media (prefers-color-scheme: dark) {
