@@ -123,15 +123,13 @@ html#sweetp {
     /* General */
     body {
         position: relative;
-        min-height: 100vh;
-        display: flex;
-        flex-direction: column;
+        min-height: 100%;
     }
 
     #sweetp-wrapper {
         width: 100%;
+        min-height: 100dvh;
         position: relative;
-        flex: 1;
     }
 
     .sweetp-menu {

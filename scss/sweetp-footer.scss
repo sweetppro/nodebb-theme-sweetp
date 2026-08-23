@@ -1,29 +1,30 @@
 html#sweetp {
     #sweetp-footer {
+        position: absolute;
+        bottom: 0;
         min-height: 50px;
-            width: 100%;
-            text-align: center;
-            font-style: normal;
-            font-size: 12px;
-            background-color: #d3d3d3;
-            color: #474747;
-            line-height: 1em;
-            font-family:
-                Source Sans Pro,
-                Helvetica Neue,
-                Helvetica,
-                Arial,
-                sans-serif;
-            display: inline-flex;
-            justify-content: center;
-            align-items: center;
-            gap: 0.3em;
-            letter-spacing: 0.1px;
-            -webkit-text-size-adjust: 100%;
-            -moz-text-size-adjust: 100%;
-            -ms-text-size-adjust: 100%;
-            text-size-adjust: 100%;
-            font-feature-settings: normal;
+        width: 100%;
+        text-align: center;
+        font-style: normal;
+        font-size: 12px;
+        color: #474747;
+        line-height: 1em;
+        font-family:
+            Source Sans Pro,
+            Helvetica Neue,
+            Helvetica,
+            Arial,
+            sans-serif;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.3em;
+        letter-spacing: 0.1px;
+        -webkit-text-size-adjust: 100%;
+        -moz-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+        text-size-adjust: 100%;
+        font-feature-settings: normal;
     }
 
     #sweetp-footer > div,
